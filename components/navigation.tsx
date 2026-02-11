@@ -106,13 +106,13 @@ export function Navigation() {
             onClick={() => scrollToSection("#home")}
             className="flex items-center gap-3"
           >
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary">
               <Image
                 src="/profile.jpg"
                 alt="Vann Sengmey"
-                width={40}
-                height={40}
-                className="w-full h-full object-cover"
+                width={100}
+                height={100}
+                className="w-full h-auto "
               />
             </div>
             <span className="text-lg font-bold text-foreground">Vann Sengmey</span>
