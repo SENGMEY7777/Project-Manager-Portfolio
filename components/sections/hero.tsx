@@ -57,16 +57,16 @@ export function HeroSection() {
               <p className="text-primary font-semibold tracking-wider uppercase text-sm">
                 Full-Stack Developer • IT Student
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground dark:text-white leading-tight">
                 {"Vann Sengmey building"}{" "}
                 <span className="text-primary">modern web experiences</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground font-light">
+              <p className="text-xl md:text-2xl text-muted-foreground dark:text-gray-200 font-light">
                 Frontend • Backend • Database Design • APIs
               </p>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-muted-foreground dark:text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
               I am a full-stack developer in training focused on building responsive web applications with strong frontend experiences, reliable backend logic, and efficient database integration. I enjoy turning complex requirements into practical digital products.
             </p>
 
@@ -84,12 +84,6 @@ export function HeroSection() {
               >
                 Let&apos;s Connect
               </Button>
-              <a
-                href="/vann-sengmey-resume.txt"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-lg hover:opacity-95 transition-all duration-200"
-              >
-                Download Resume
-              </a>
             </div>
 
             {/* Social Links */}
@@ -113,7 +107,7 @@ export function HeroSection() {
         {/* Scroll Indicator */}
         <button
           onClick={() => scrollToSection("#about")}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground dark:text-gray-300 hover:text-primary transition-colors animate-bounce"
           aria-label="Scroll to about section"
         >
           <span className="text-xs uppercase tracking-wider">Scroll Down</span>

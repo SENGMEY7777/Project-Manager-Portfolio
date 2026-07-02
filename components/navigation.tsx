@@ -96,7 +96,7 @@ export function Navigation() {
                 className={cn(
                   "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 text-left w-full",
                   isActive
-                    ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                    ? "bg-sidebar-primary text-sidebar-primary-foreground dark:text-white"
                     : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent"
                 )}
                 aria-label={item.name}
@@ -170,7 +170,7 @@ export function Navigation() {
                   className={cn(
                     "flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-left",
                     isActive
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-primary text-primary-foreground dark:text-white"
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                   )}
                 >
