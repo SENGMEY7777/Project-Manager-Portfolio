@@ -16,7 +16,6 @@ const technicalSkills = [
 ];
 
 const tools = [
-  "Next.js",
   "Spring Boot",
   "XAMPP",
   "Git",
@@ -24,6 +23,10 @@ const tools = [
   "Figma",
   "MySQL",
   "MongoDB",
+  "Docker",
+  "Node.js & Express",
+  "Vue.js",
+  "JavaScript",
 ];
 
 const softSkills = [
