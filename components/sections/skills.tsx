@@ -3,11 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 
 const technicalSkills = [
-  { name: "HTML", level: 90 },
-  { name: "CSS", level: 85 },
+  { name: "HTML", level: 100 },
+  { name: "CSS", level: 95 },
+  {name: "Bootstrap", level: 90 },
+  {name: "Tailwind CSS", level: 80 },
   { name: "JavaScript", level: 80 },
   { name: "Vue.js", level: 70 },
+  {name: "Node.js & Express", level: 75 },
   { name: "Java", level: 65 },
+  { name: "Spring Boot", level: 60 },
   { name: "UX/UI Design", level: 75 },
 ];
 
@@ -111,7 +115,7 @@ export function SkillsSection() {
                 {tools.map((tool) => (
                   <span
                     key={tool}
-                    className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                    className="portfolio-card inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
                   >
                     {tool}
                   </span>

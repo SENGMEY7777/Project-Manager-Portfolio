@@ -11,7 +11,7 @@ const projects = [
   {
     title: "E-Commerce Platform",
     description:
-      "A Front-end e-commerce application with product management, shopping cart, and payment integration.",
+      "A responsive e-commerce web application designed with intuitive product browsing, cart management, and a streamlined checkout experience.",
     image:
       "/image.png",
     technologies: ["HTML", "CSS", "Javascript"],
@@ -20,9 +20,9 @@ const projects = [
     demo: "https://cambo-contruction.netlify.app/",
   },
   {
-    title: "E-Smart Shop Plateform",
+    title: "Smart Commerce Platform",
     description:
-      "A Full Stack e-commerce application with product management, shopping cart, and payment integration.",
+      "A full-stack commerce solution focused on product listing, user interaction, and reliable application flow for online shopping.",
     image:
       "/imag2.jpg",
     technologies: ["Vue.js", "Node.js", "MongoDB"],
@@ -31,9 +31,9 @@ const projects = [
     demo: "https://e-smart-shop.vercel.app/",
   },
   {
-    title: "Document Media and Portal",
+    title: "Document Media Portal",
     description:
-      "A modern, responsive portfolio website showcasing projects and skills with smooth animations.",
+      "A modern digital portal built with a strong focus on content presentation, accessibility, and clean interface design.",
     image:
       "https://i.pinimg.com/1200x/51/87/d4/5187d40953f86b0a778716e1ff083e76.jpg",
     technologies: ["Next.js", "SpringBoot", "MyQl"],
@@ -61,7 +61,7 @@ export function ProjectsSection() {
             Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4">
-            Featured Work
+            Selected Projects
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
@@ -89,7 +89,7 @@ export function ProjectsSection() {
           {filteredProjects.map((project) => (
             <article
               key={project.title}
-              className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition"
+              className="portfolio-card group bg-card border border-border rounded-xl"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">

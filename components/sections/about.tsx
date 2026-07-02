@@ -1,36 +1,36 @@
 import { Code2, Lightbulb, Users, Briefcase } from "lucide-react";
 
 const stats = [
-  { value: "3+", label: "Years Learning" },
-  { value: "10+", label: "Projects Done" },
-  { value: "5+", label: "Technologies" },
-  { value: "100%", label: "Dedication" },
+  { value: "3+", label: "Years of Growth" },
+  { value: "10+", label: "Projects Built" },
+  { value: "5+", label: "Core Technologies" },
+  { value: "100%", label: "Commitment" },
 ];
 
 const highlights = [
   {
     icon: Code2,
-    title: "Technology Explorer",
+    title: "Full-Stack Development",
     description:
-      "Passionate about exploring new technologies and staying updated with the latest trends in IT.",
+      "Focused on building complete web solutions with responsive interfaces, backend logic, and connected data flow.",
   },
   {
     icon: Lightbulb,
-    title: "Continuous Learner",
+    title: "Problem Solving",
     description:
-      "Committed to self-improvement and constantly expanding my knowledge through projects.",
+      "Approach challenges with analytical thinking, adaptability, and a strong desire to learn.",
   },
   {
     icon: Users,
-    title: "Team Player",
+    title: "Collaboration",
     description:
-      "Strong communication skills with the ability to collaborate effectively in team environments.",
+      "Communicate clearly and work effectively with teams to deliver dependable digital solutions.",
   },
   {
     icon: Briefcase,
-    title: "Project Builder",
+    title: "Product Delivery",
     description:
-      "Hands-on experience building practical web applications using modern technologies.",
+      "Translate product ideas into practical web applications with attention to performance, reliability, and maintainability.",
   },
 ];
 
@@ -53,25 +53,13 @@ export function AboutSection() {
           {/* About Content */}
           <div className="lg:col-span-3 space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              {"I'm"} <span className="text-primary">Vann Sengmey</span>, an
-              Aspiring IT Professional
+              {"I'm"} <span className="text-primary">Vann Sengmey</span> — Full-stack developer & platform engineer
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              I build accessible, pixel-perfect digital experiences for the web.
-              Currently in my third year at The University of Cambodia, I
-              dedicate my time to learning new technologies and building
-              practical projects that solve real-world problems.
+                I study developer tooling and full-stack web applications to understand and improve operational workflows. My work covers frontend implementation, API design, and reliable backend systems.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My journey in technology started with curiosity about how things
-              work on the web. This curiosity has evolved into a deep passion
-              for creating digital experiences that are both functional and
-              visually appealing.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              When {"I'm"} not coding, you can find me exploring new
-              technologies, reading about the latest industry trends, or working
-              on personal projects to sharpen my skills.
+              I graduated from the University of Cambodia (UC) and have over 4 years of industry experience across agile startups and large-scale enterprises. I focus on clean architecture, maintainability, and delivering practical value.
             </p>
           </div>
 
@@ -81,7 +69,7 @@ export function AboutSection() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="p-6 bg-card border border-border rounded-xl text-center hover:border-primary/50 transition-colors"
+                  className="portfolio-card p-6 bg-card border border-border rounded-xl text-center"
                 >
                   <p className="text-3xl md:text-4xl font-bold text-primary">
                     {stat.value}
@@ -100,7 +88,7 @@ export function AboutSection() {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:bg-card/80 transition-all duration-300"
+              className="portfolio-card group p-6 bg-card border border-border rounded-xl"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                 <item.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />

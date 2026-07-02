@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Home, User, GraduationCap, Wrench, FolderOpen, Mail } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Menu, X, Home, User, GraduationCap, Wrench, FolderOpen, Mail, Moon, Sun, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -11,14 +12,18 @@ const navItems = [
   { name: "Education", href: "#education", icon: GraduationCap },
   { name: "Skills", href: "#skills", icon: Wrench },
   { name: "Projects", href: "#projects", icon: FolderOpen },
+  { name: "Resume", href: "#resume", icon: Briefcase },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       const sections = navItems.map((item) => item.href.slice(1));
       const scrollPosition = window.scrollY + 100;
@@ -44,12 +49,16 @@ export function Navigation() {
     setIsOpen(false);
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <>
       {/* Desktop Sidebar Navigation */}
       <nav className="hidden lg:flex fixed left-0 top-0 bottom-0 w-72 bg-sidebar border-r border-sidebar-border flex-col items-center py-8 z-50">
         {/* Profile Section */}
-        <div className="flex flex-col items-center mb-8 px-6">
+        <div className="flex flex-col items-center mb-6 px-6">
           <div className="relative w-32 h-32 mb-4">
             <div className="absolute inset-0 rounded-full bg-sidebar-primary/20" />
             <div className="absolute inset-1 rounded-full bg-sidebar overflow-hidden border-2 border-sidebar-primary">
@@ -65,6 +74,14 @@ export function Navigation() {
           </div>
           <h2 className="text-xl font-bold text-sidebar-foreground mb-1">Vann Sengmey</h2>
           <p className="text-sm text-sidebar-foreground/70 text-center">Aspiring IT Professional</p>
+          <button
+            onClick={toggleTheme}
+            className="mt-4 inline-flex items-center gap-2 rounded-full border border-sidebar-border/70 px-3 py-2 text-sm text-sidebar-foreground/80 transition-colors hover:border-primary hover:text-sidebar-foreground"
+            aria-label="Toggle theme"
+          >
+            {mounted && theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            <span>{mounted && theme === "dark" ? "Light mode" : "Dark mode"}</span>
+          </button>
         </div>
 
         {/* Navigation Links */}
@@ -118,13 +135,22 @@ export function Navigation() {
             <span className="text-lg font-bold text-foreground">Vann Sengmey</span>
           </button>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="rounded-full border border-border p-2 text-foreground transition-colors hover:border-primary hover:text-primary"
+              aria-label="Toggle theme"
+            >
+              {mounted && theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         <div

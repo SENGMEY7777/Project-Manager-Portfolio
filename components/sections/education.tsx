@@ -5,8 +5,8 @@ const education = [
     institution: "The University of Cambodia",
     degree: "Bachelor of Arts",
     field: "Information Technology",
-    year: "Year 3 (Current)",
-    period: "2022 - Present",
+    year: "Year 4 (Current)",
+    period: "2023 - Present",
     highlights: [
       "Focusing on Information Technology and Computer Science",
       "Active participation in tech workshops and seminars",
@@ -50,7 +50,7 @@ export function EducationSection() {
             {education.map((edu) => (
               <div
                 key={edu.institution}
-                className="p-8 bg-card border border-border rounded-2xl hover:border-primary/30 transition-all duration-300"
+                className="portfolio-card p-8 bg-card border border-border rounded-2xl"
               >
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
@@ -102,12 +102,12 @@ export function EducationSection() {
           {/* Achievements */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-foreground">
-              Additional Learning
+              Professional Growth
             </h3>
             {achievements.map((item) => (
               <div
                 key={item.title}
-                className="p-6 bg-card border border-border rounded-xl hover:border-primary/30 transition-all duration-300"
+                className="portfolio-card p-6 bg-card border border-border rounded-xl"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-6 w-6 text-primary" />

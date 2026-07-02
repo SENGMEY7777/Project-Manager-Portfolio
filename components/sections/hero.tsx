@@ -28,13 +28,14 @@ export function HeroSection() {
         <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-primary blur-3xl" />
         <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-primary blur-3xl" />
       </div>
+      <div className="hero-gradient" />
 
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start order-1 lg:order-2">
             <div className="relative">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-primary/20 portfolio-card">
                 <Image
                   src="/banner.jpg"
                   alt="Vann Sengmey"
@@ -54,22 +55,19 @@ export function HeroSection() {
           <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
             <div className="space-y-4">
               <p className="text-primary font-semibold tracking-wider uppercase text-sm">
-                Welcome to my portfolio
+                Full-Stack Developer • IT Student
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                {"Hi, I'm"}{" "}
-                <span className="text-primary">Vann Sengmey</span>
+                {"Vann Sengmey building"}{" "}
+                <span className="text-primary">modern web experiences</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                Aspiring IT Professional & Web Developer
+                Frontend • Backend • Database Design • APIs
               </p>
             </div>
 
             <p className="text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Passionate about technology and self-improvement, continuously
-              learning and building projects. Currently pursuing my degree at
-              The University of Cambodia while developing practical skills in
-              web development.
+              I am a full-stack developer in training focused on building responsive web applications with strong frontend experiences, reliable backend logic, and efficient database integration. I enjoy turning complex requirements into practical digital products.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -77,15 +75,21 @@ export function HeroSection() {
                 onClick={() => scrollToSection("#projects")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
               >
-                View My Work
+                Explore Projects
               </Button>
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("#contact")}
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 bg-transparent"
               >
-                Contact Me
+                Let&apos;s Connect
               </Button>
+              <a
+                href="/vann-sengmey-resume.txt"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-lg hover:opacity-95 transition-all duration-200"
+              >
+                Download Resume
+              </a>
             </div>
 
             {/* Social Links */}

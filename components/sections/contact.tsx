@@ -72,7 +72,7 @@ export function ContactSection() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            {"I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!"}
+            I am open to discussing development opportunities, collaborative projects, and professional connections in the field of technology and web development.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export function ContactSection() {
               {contactInfo.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-start gap-4 p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-colors"
+                  className="portfolio-card flex items-start gap-4 p-4 bg-card border border-border rounded-xl"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
                     <item.icon className="h-5 w-5 text-primary-foreground" />
@@ -133,7 +133,7 @@ export function ContactSection() {
           <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="p-8 bg-card border border-border rounded-2xl space-y-6"
+              className="portfolio-card p-8 bg-card border border-border rounded-2xl space-y-6"
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">

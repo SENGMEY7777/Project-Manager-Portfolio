@@ -2,6 +2,8 @@ import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about";
 import { EducationSection } from "@/components/sections/education";
+import { AchievementsSection } from "@/components/sections/achievements";
+import { ResumeSection } from "@/components/sections/resume";
 import { SkillsSection } from "@/components/sections/skills";
 import { ProjectsSection } from "@/components/sections/projects";
 import { ContactSection } from "@/components/sections/contact";
@@ -11,10 +13,12 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="lg:ml-72">
+      <main className="lg:ml-72 bg-background">
         <HeroSection />
         <AboutSection />
         <EducationSection />
+        <AchievementsSection />
+        <ResumeSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />

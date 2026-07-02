@@ -1,0 +1,32 @@
+VANN SENGMEY
+Full-Stack Developer & Platform Engineer
+
+Contact
+Email: vannsengmey748@email.com
+Location: Phnom Penh, Cambodia
+
+Professional Summary
+I study developer tools and end-to-end web applications that improve operational efficiency and developer productivity. I graduated from the University of Cambodia (UC) and have over 4 years of industry experience working across agile startups and large-scale enterprises.
+
+Core Skills
+- Frontend Development
+- Backend Development
+- API Design & Integration
+- Responsive UI Design
+- Database Design
+- Dev Tools
+
+Education
+The University of Cambodia
+Information Technology
+Graduated
+
+Projects (highlights)
+- E-Commerce Platform — Full-stack commerce solution
+- Smart Commerce Platform — Integrated frontend & backend
+- Document Media Portal — Content-focused portal UI
+
+Professional Focus
+- Building maintainable, scalable web systems
+- Improving developer workflows with admin tools
+- Delivering user-centered product experiences
