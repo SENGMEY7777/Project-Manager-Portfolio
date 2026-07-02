@@ -11,14 +11,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "vannsengmey@email.com",
-    href: "mailto:vannsengmey@email.com",
+    value: "vannsengmey748@email.com",
+    href: "mailto:vannsengmey748@email.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+855 12 345 678",
-    href: "tel:+85512345678",
+    value: "+855 68 832 900",
+    href: "tel:+85568832900",
   },
   {
     icon: MapPin,
@@ -43,20 +43,60 @@ export function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [feedback, setFeedback] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFeedback(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      if (endpoint) {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        });
 
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitted(false), 3000);
+        if (!response.ok) {
+          throw new Error("Unable to send message");
+        }
+      } else {
+        const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+
+        window.location.href = `mailto:vannsengmey748@email.com?subject=${subject}&body=${body}`;
+      }
+
+      setSubmitted(true);
+      setFeedback(
+        endpoint
+          ? "Message sent successfully."
+          : "Your email app has been opened with your message."
+      );
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      setTimeout(() => {
+        setSubmitted(false);
+        setFeedback(null);
+      }, 4000);
+    } catch {
+      setFeedback("Unable to send your message right now. Please email me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -233,6 +273,10 @@ export function ContactSection() {
                   </>
                 )}
               </Button>
+
+              {feedback && (
+                <p className="text-sm text-center text-muted-foreground">{feedback}</p>
+              )}
             </form>
           </div>
         </div>

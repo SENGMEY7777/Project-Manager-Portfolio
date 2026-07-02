@@ -58,8 +58,7 @@ export function HeroSection() {
                 Full-Stack Developer • IT Student
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground dark:text-white leading-tight">
-                {"Vann Sengmey building"}{" "}
-                <span className="text-primary">modern web experiences</span>
+                I&apos;m <span className="text-primary">Vann Sengmey</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground dark:text-gray-200 font-light">
                 Frontend • Backend • Database Design • APIs

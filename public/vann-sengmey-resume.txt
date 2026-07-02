@@ -6,7 +6,7 @@ Email: vannsengmey748@email.com
 Location: Phnom Penh, Cambodia
 
 Professional Summary
-I study developer tools and end-to-end web applications that improve operational efficiency and developer productivity. I graduated from the University of Cambodia (UC) and have over 4 years of industry experience working across agile startups and large-scale enterprises.
+I study developer tools and end-to-end web applications that improve operational efficiency and developer productivity. I am currently in my fourth year at the University of Cambodia (UC) and have over 4 years of practical experience working across startups and large-scale enterprises.
 
 Core Skills
 - Frontend Development
@@ -19,7 +19,7 @@ Core Skills
 Education
 The University of Cambodia
 Information Technology
-Graduated
+Currently in fourth year
 
 Projects (highlights)
 - E-Commerce Platform — Full-stack commerce solution

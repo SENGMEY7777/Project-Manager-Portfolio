@@ -1,10 +1,10 @@
 import { Code2, Lightbulb, Users, Briefcase } from "lucide-react";
 
 const stats = [
-  { value: "3+", label: "Years of Growth" },
-  { value: "10+", label: "Projects Built" },
+  { value: "4+", label: "Years Experience" },
+  { value: "10+", label: "Projects Delivered" },
   { value: "5+", label: "Core Technologies" },
-  { value: "100%", label: "Commitment" },
+  { value: "100%", label: "Quality Focus" },
 ];
 
 const highlights = [
@@ -53,13 +53,13 @@ export function AboutSection() {
           {/* About Content */}
           <div className="lg:col-span-3 space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              {"I'm"} <span className="text-primary">Vann Sengmey</span> — Full-stack developer & platform engineer
+              {"I'm"} <span className="text-primary">Vann Sengmey</span> — a full-stack developer helping teams create reliable, scalable, and user-centered digital products.
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-                I study developer tooling and full-stack web applications to understand and improve operational workflows. My work covers frontend implementation, API design, and reliable backend systems.
+              I focus on building software that improves operational efficiency, strengthens user experience, and supports long-term business growth. My work combines thoughtful architecture, clean implementation, and practical delivery across web applications and internal tools.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I graduated from the University of Cambodia (UC) and have over 4 years of industry experience across agile startups and large-scale enterprises. I focus on clean architecture, maintainability, and delivering practical value.
+              I am currently in my fourth year at the University of Cambodia (UC) and bring over 4 years of industry experience across startups and large-scale enterprises, delivering maintainable systems, APIs, and interfaces that solve real business problems.
             </p>
           </div>
 

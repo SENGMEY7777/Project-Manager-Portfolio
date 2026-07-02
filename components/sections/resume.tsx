@@ -5,17 +5,17 @@ import { ArrowRight, BadgeCheck, BriefcaseBusiness, Code2, GraduationCap, Layers
 const highlights = [
   {
     title: "Education",
-    description: "Third-year Information Technology student at The University of Cambodia with a strong academic foundation in computing and digital systems.",
+    description: "Currently in my fourth year at the University of Cambodia, building a strong foundation in information technology and software development.",
     icon: GraduationCap,
   },
   {
     title: "Development Focus",
-    description: "Specialized in responsive web development, UI implementation, and building practical user-facing applications.",
+    description: "Specialized in responsive web development, UI implementation, and building practical user-facing applications that support real business needs.",
     icon: Code2,
   },
   {
     title: "Project Delivery",
-    description: "Experience translating ideas into polished, functional solutions with attention to usability, structure, and maintainability.",
+    description: "Experienced in turning ideas into polished, functional solutions with careful attention to usability, structure, and maintainability.",
     icon: BriefcaseBusiness,
   },
 ];
@@ -64,13 +64,13 @@ export function ResumeSection() {
                   Summary
                 </p>
                 <h3 className="text-2xl font-semibold text-foreground">
-                  Full-stack developer & platform engineer
+                  Full-stack developer focused on practical product delivery
                 </h3>
               </div>
             </div>
 
               <p className="mt-6 text-base leading-8 text-muted-foreground">
-                I study developer tools and end-to-end web applications to understand and improve operational efficiency and developer productivity. I graduated from the University of Cambodia (UC) and bring over 4 years of industry experience across startups and large-scale enterprises, delivering maintainable systems, APIs, and user-focused interfaces.
+                I study developer tools and end-to-end web applications to improve operational efficiency and developer productivity. I am currently in my fourth year at the University of Cambodia (UC) and bring over 4 years of practical experience across startups and large-scale enterprises, delivering maintainable systems, APIs, and user-focused interfaces.
               </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -90,10 +90,10 @@ export function ResumeSection() {
               Career Direction
             </p>
             <h3 className="mt-3 text-2xl font-semibold text-foreground">
-              Building toward impactful technical roles
+              Focused on product-minded engineering roles
             </h3>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              Interested in opportunities where strong development fundamentals, design awareness, backend understanding, and collaborative execution can contribute to meaningful digital products.
+              Interested in opportunities where strong development fundamentals, design awareness, backend understanding, and collaborative execution can contribute to meaningful digital products and efficient teams.
             </p>
             <div className="mt-6 space-y-3">
               {[

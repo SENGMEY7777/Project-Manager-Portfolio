@@ -11,7 +11,7 @@ const projects = [
   {
     title: "E-Commerce Platform",
     description:
-      "A responsive e-commerce web application designed with intuitive product browsing, cart management, and a streamlined checkout experience.",
+      "A responsive commerce experience designed for intuitive product browsing, smooth cart interaction, and a streamlined checkout flow.",
     image:
       "/image.png",
     technologies: ["HTML", "CSS", "Javascript"],
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Smart Commerce Platform",
     description:
-      "A full-stack commerce solution focused on product listing, user interaction, and reliable application flow for online shopping.",
+      "A full-stack commerce solution focused on reliable product workflows, clear user interaction, and a polished online shopping experience.",
     image:
       "/imag2.jpg",
     technologies: ["Vue.js", "Node.js", "MongoDB"],
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Document Media Portal",
     description:
-      "A modern digital portal built with a strong focus on content presentation, accessibility, and clean interface design.",
+      "A content-focused portal designed to present information clearly with strong usability, accessible structure, and a modern interface.",
     image:
       "https://i.pinimg.com/1200x/51/87/d4/5187d40953f86b0a778716e1ff083e76.jpg",
     technologies: ["Next.js", "SpringBoot", "MyQl"],
@@ -61,7 +61,7 @@ export function ProjectsSection() {
             Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4">
-            Selected Projects
+            Selected Work
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
