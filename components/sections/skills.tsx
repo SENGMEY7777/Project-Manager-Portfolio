@@ -30,12 +30,13 @@ const tools = [
 ];
 
 const softSkills = [
-  "Communication",
-  "Teamwork",
-  "Problem Solving",
-  "Time Management",
-  "Adaptability",
-  "Critical Thinking",
+  "Effective Communication",
+  "Cross-Functional Collaboration",
+  "Analytical Problem Solving",
+  "Research & Data Analysis",
+  "Strategic & Critical Thinking",
+  "Time Management & Prioritization",
+  "Adaptability & Continuous Learning",
 ];
 
 function SkillBar({ name, level }: { name: string; level: number }) {
