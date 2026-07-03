@@ -2,7 +2,6 @@
 
 import { Github, Linkedin, Facebook, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TiltCard } from "@/components/ui/tilt-card";
 import Image from "next/image";
 
 const socialLinks = [
@@ -36,11 +35,7 @@ export function HeroSection() {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start order-1 lg:order-2">
             <div className="relative">
-              <TiltCard
-                maxTilt={10}
-                glowRadius={300}
-                className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-primary/20"
-              >
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-primary/20 portfolio-card">
                 <Image
                   src="/banner.jpg"
                   alt="Vann Sengmey"
@@ -49,7 +44,7 @@ export function HeroSection() {
                   className="w-full h-full object-cover"
                   priority
                 />
-              </TiltCard>
+              </div>
               {/* Decorative Elements */}
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/30 rounded-2xl -z-10" />
               <div className="absolute -bottom-8 -right-8 w-full h-full border border-primary/10 rounded-2xl -z-20" />
