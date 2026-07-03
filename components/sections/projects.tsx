@@ -59,12 +59,10 @@ const projects = [
   {
     title: "AlumniNet System",
     description: "this project contributors with scholarship MPTC/ANT and more projects done in class with teamwork (classmate)",
-    image:
-      "/alumni.png",
-    technologies: ["Vue.js", "Node.js", "Express.js", "MySQL"],
-    category: "Web",
-    github: "https://github.com/Sourcedevkh/alumniNet-web",
-    demo: "https://web.alumninet.linkpc.net/",
+    category: "Backend",
+    image: "/alumni.png",
+    technologies: ["JavaScript", "Node.js", "Express.js", "MySQL"],
+    github: "git@github.com:Sourcedevkh/alumniNet-api.git",
   },
   {
     title: "DevTech Journal",
