@@ -36,9 +36,20 @@ const projects = [
       "A content-focused portal designed to present information clearly with strong usability, accessible structure, and a modern interface.",
     image:
       "https://i.pinimg.com/1200x/51/87/d4/5187d40953f86b0a778716e1ff083e76.jpg",
-    technologies: ["Next.js", "SpringBoot", "MyQl"],
+    technologies: ["Next.js", "SpringBoot", "MySQL"],
     category: "Design",
     demo: "https://www.figma.com/design/whXPb23YVk3aIZ4FP2buIm/Document---Media-Portal?node-id=346-4911&t=rERQ0XJyIYCsQioz-0",
+  },
+  {
+    title: "CamboPhoneStore",
+    description:
+      "A clean and modern smartphone e-commerce storefront featuring brand filtering, product search, cart overview, light/dark mode, and product preorder options.",
+    image:
+      "/cambophone.png",
+    technologies: ["React", "Tailwind CSS", "Next.js"],
+    category: "Web",
+    github: "https://github.com/vann-sengmey/CamboPhoneStore",
+    demo: "https://cambo-phone-store.vercel.app/",
   },
 ];
 

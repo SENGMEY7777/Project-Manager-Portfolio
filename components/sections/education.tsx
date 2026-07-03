@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, BookOpen, Award } from "lucide-react";
+import { GraduationCap, Calendar, BookOpen, Award, Medal, Clock, Users } from "lucide-react";
 
 const education = [
   {
@@ -15,6 +15,37 @@ const education = [
     ],
   },
 ];
+
+const scholarship = {
+  institution: "ANT Technology Training Center",
+  role: "Scholarship Trainee",
+  duration: "16 June 2025 – 17 July 2026",
+  schedule: "Monday – Friday",
+  hours: "700 hours",
+  funding: "Sponsored by Ministry of Post and Telecommunications and CBRD Fund",
+  courses: [
+    {
+      label: "Frontend",
+      items: "HTML, CSS, Bootstrap, JavaScript, Vue.js, API Consumption",
+    },
+    {
+      label: "Backend",
+      items: "Node.js, Express.js, API Design, JWT Authentication, MVC Architecture",
+    },
+    {
+      label: "Extra Courses",
+      items: "C++, UX/UI Advanced Concepts, Cyber Security Fundamentals",
+    },
+    {
+      label: "Tools",
+      items: "Git, GitHub, Version Control, Team Collaboration",
+    },
+    {
+      label: "Methodology",
+      items: "Software Development Life Cycle (SDLC)",
+    },
+  ],
+};
 
 const achievements = [
   {
@@ -45,8 +76,9 @@ export function EducationSection() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Education Card */}
-          <div className="lg:col-span-2">
+          {/* Left column: University + Scholarship */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* University Card */}
             {education.map((edu) => (
               <div
                 key={edu.institution}
@@ -97,9 +129,84 @@ export function EducationSection() {
                 </div>
               </div>
             ))}
+
+            {/* Scholarship Card */}
+            <div className="portfolio-card p-8 bg-card border border-border rounded-2xl">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                  <Medal className="h-8 w-8 text-primary" />
+                </div>
+                <div className="flex-1">
+                  {/* Header */}
+                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">
+                        {scholarship.institution}
+                      </h3>
+                      <p className="text-primary font-semibold mt-0.5">
+                        {scholarship.role}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg">
+                      <Calendar className="h-4 w-4 text-primary" />
+                      <span className="text-sm text-foreground">
+                        {scholarship.duration}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Meta info */}
+                  <div className="flex flex-wrap gap-3 mb-5">
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full text-sm">
+                      <Clock className="h-3.5 w-3.5 text-primary" />
+                      <span className="text-primary font-medium">
+                        {scholarship.hours}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full text-sm">
+                      <Users className="h-3.5 w-3.5 text-primary" />
+                      <span className="text-primary font-medium">
+                        {scholarship.schedule}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Funding */}
+                  <div className="mb-5 p-3 rounded-xl bg-primary/5 border border-primary/20">
+                    <p className="text-sm text-foreground">
+                      <span className="font-semibold text-primary">Funding: </span>
+                      {scholarship.funding}
+                    </p>
+                  </div>
+
+                  {/* Course label */}
+                  <p className="text-sm font-semibold text-foreground mb-3">
+                    Web Development Course:
+                  </p>
+
+                  {/* Course items */}
+                  <ul className="space-y-2.5">
+                    {scholarship.courses.map((course) => (
+                      <li
+                        key={course.label}
+                        className="flex items-start gap-3 text-muted-foreground text-sm"
+                      >
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                        <span>
+                          <span className="font-semibold text-foreground">
+                            {course.label}:{" "}
+                          </span>
+                          {course.items}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Achievements */}
+          {/* Right column: Achievements */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-foreground">
               Professional Growth

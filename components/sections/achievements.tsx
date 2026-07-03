@@ -25,6 +25,7 @@ export function AchievementsSection() {
   return (
     <section id="achievements" className="py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold tracking-wider uppercase text-sm">
             Development Focus

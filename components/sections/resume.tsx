@@ -44,7 +44,7 @@ export function ResumeSection() {
             </h2>
           </div>
           <a
-            href="/vann-sengmey-resume.txt"
+            href="/Vann Sengmey_Full Stack Developer.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >

@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-geist-sans), 'Geist Fallback';
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -223,5 +223,16 @@
     pointer-events: none;
     z-index: 0;
     opacity: 0.9;
+  }
+
+  /* Sidebar transition support */
+  main {
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media (min-width: 1024px) {
+    body[data-sidebar-collapsed="true"] main {
+      margin-left: 5rem; /* w-20 */
+    }
   }
 }
