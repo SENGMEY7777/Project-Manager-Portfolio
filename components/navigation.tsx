@@ -24,9 +24,9 @@ const navItems = [
   { name: "Home", href: "#home", icon: Home },
   { name: "About", href: "#about", icon: User },
   { name: "Education", href: "#education", icon: GraduationCap },
+  { name: "Resume", href: "#resume", icon: Briefcase },
   { name: "Skills", href: "#skills", icon: Wrench },
   { name: "Projects", href: "#projects", icon: FolderOpen },
-  { name: "Resume", href: "#resume", icon: Briefcase },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 
@@ -51,15 +51,24 @@ export function Navigation() {
 
     const handleScroll = () => {
       const sections = navItems.map((item) => item.href.slice(1));
-      const scrollPosition = window.scrollY + 100;
+      let currentSection = sections[0];
 
-      for (const section of sections.reverse()) {
+      for (const section of sections) {
         const element = document.getElementById(section);
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(section);
-          break;
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 300) {
+            currentSection = section;
+          }
         }
       }
+
+      // If scrolled to the very bottom, set active to the last section
+      if (window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight - 50) {
+        currentSection = sections[sections.length - 1];
+      }
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
