@@ -1,7 +1,7 @@
 import { Code2, Lightbulb, Users, Briefcase } from "lucide-react";
 
 const stats = [
-  { value: "4+", label: "Years Experience" },
+  { value: "4th", label: "Year IT Student" },
   { value: "10+", label: "Projects Delivered" },
   { value: "5+", label: "Core Technologies" },
   { value: "100%", label: "Quality Focus" },
@@ -59,7 +59,7 @@ export function AboutSection() {
               I focus on building software that improves operational efficiency, strengthens user experience, and supports long-term business growth. My work combines thoughtful architecture, clean implementation, and practical delivery across web applications and internal tools.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I am currently in my fourth year at the University of Cambodia (UC) and bring over 4 years of industry experience across startups and large-scale enterprises, delivering maintainable systems, APIs, and interfaces that solve real business problems.
+              I am currently in my fourth year at the University of Cambodia (UC), continually developing my skills across various academic and personal projects, and delivering maintainable systems, APIs, and interfaces that solve real problems.
             </p>
           </div>
 
