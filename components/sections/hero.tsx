@@ -3,10 +3,11 @@
 import { Github, Linkedin, Facebook, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import meImage from "@/assets/me.jpg";
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/SENGMEY7777" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vann-sengmey-b022b73b9/" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/17xNCmvNwc/?mibextid=wwXIfr" },
 ];
 
@@ -37,7 +38,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-primary/20 portfolio-card">
                 <Image
-                  src="/banner.jpg"
+                  src={meImage}
                   alt="Vann Sengmey"
                   width={384}
                   height={384}
